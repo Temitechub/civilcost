@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Civilcost Construction Concept</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-building text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Civilcost Construction</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="services.html" class="nav-link text-blue-600 font-semibold">Services</a>
+                    <a href="blog.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">About</a>
+                <a href="services.html" class="block py-2 text-blue-600 font-semibold">Services</a>
+                <a href="blog.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Blog</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-100 py-8 pt-24">
+        <div class="container mx-auto px-6">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+                            <span class="text-gray-500">Services</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Title -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Our Services</h1>
+            <p class="text-xl text-center text-gray-600 mt-4 max-w-3xl mx-auto">Comprehensive engineering solutions tailored to meet your project requirements</p>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <!-- Service 1: Text/Image Layout -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Civil Engineering</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our civil engineering services encompass the planning, design, and implementation of infrastructure projects. We specialize in transportation systems, water resources, and environmental engineering solutions.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Our team utilizes cutting-edge technology and sustainable practices to deliver projects that meet the highest standards of quality and efficiency. From feasibility studies to final implementation, we ensure every aspect of your civil engineering project is handled with precision and expertise.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Infrastructure planning and design</li>
+                        <li>Transportation engineering</li>
+                        <li>Water resource management</li>
+                        <li>Environmental impact assessment</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://i.pinimg.com/1200x/9d/8e/71/9d8e713f86ccc9b89c95240c526b9418.jpg" alt="Civil Engineering" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+
+            <!-- Service 2: Text/Video Layout -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Structural Engineering</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our structural engineering services focus on the design and analysis of structures to ensure safety, durability, and functionality. We work on a wide range of projects, from residential buildings to large commercial complexes.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Using advanced modeling software and engineering principles, we create structural solutions that optimize material usage while maintaining structural integrity. Our team is experienced in working with various construction materials and techniques.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Structural design and analysis</li>
+                        <li>Seismic engineering</li>
+                        <li>Foundation design</li>
+                        <li>Structural retrofitting and rehabilitation</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <iframe class="w-96 h-80 rounded-lg shadow-xl" src="https://www.youtube.com/embed/oqpp8L4J4ek?si=wOWbwMUVjdTLPeth" title="Structural Engineering Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Image/Text Layout -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <img src="https://i.pinimg.com/1200x/9c/38/11/9c381128e7c981a0434cb0a706119c42.jpg" alt="Training Services" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Training & Development</h2>
+                    <p class="text-gray-600 mb-4">
+                        We offer comprehensive training programs for engineers, architects, and construction professionals. Our courses cover the latest industry practices, software tools, and regulatory requirements.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Our training programs are designed by industry experts and combine theoretical knowledge with practical applications. We offer both on-site and online training options to accommodate different learning preferences and schedules.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Professional certification courses</li>
+                        <li>Software training (AutoCAD, Revit, etc.)</li>
+                        <li>Project management workshops</li>
+                        <li>Custom corporate training programs</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Text/Image Layout -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Design & Consulting</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our design and consulting services provide expert guidance throughout the project lifecycle. From initial concept development to final implementation, we ensure your project meets all technical, aesthetic, and functional requirements.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Our consulting team brings extensive experience in various sectors, helping clients navigate complex challenges and make informed decisions. We specialize in value engineering, risk assessment, and sustainable design solutions.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Architectural design</li>
+                        <li>Value engineering</li>
+                        <li>Risk assessment and mitigation</li>
+                        <li>Sustainable design solutions</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://i.pinimg.com/1200x/0f/58/24/0f58248337009ecaf41bbe59ecd9ba12.jpg" alt="Design & Consulting" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+
+            <!-- Service 5: Text/Video Layout -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Procurement Services</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our procurement services ensure you get the best quality materials at competitive prices. We manage the entire procurement process, from supplier selection to delivery coordination.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        With our extensive network of suppliers and deep market knowledge, we help clients optimize their procurement strategies. We ensure compliance with all regulations and maintain transparency throughout the process.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Supplier evaluation and selection</li>
+                        <li>Price negotiation and contract management</li>
+                        <li>Quality assurance and inspection</li>
+                        <li>Logistics and delivery coordination</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <iframe class="w-full h-96 rounded-lg shadow-xl" src="https://www.youtube.com/embed/g246t5TrNXc?si=se7x_aca57VUu-7e&amp;start=120" title="Procurement Services Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Service 6: Image/Text Layout -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://i.pinimg.com/1200x/95/cd/14/95cd14cc1ae97bba595f2a8e80e7e6d6.jpg" alt="Project Implementation" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Project Implementation</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our project implementation services ensure your vision becomes reality. We manage every aspect of the construction process, from site preparation to final handover.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        With a focus on quality, safety, and efficiency, our implementation team coordinates all stakeholders to ensure smooth project execution. We employ modern project management methodologies to deliver projects on time and within budget.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Project planning and scheduling</li>
+                        <li>Site management and supervision</li>
+                        <li>Quality control and assurance</li>
+                        <li>Health and safety management</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Inquire About This Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Need a Custom Solution?</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">Contact us to discuss how we can tailor our services to meet your specific project requirements.</p>
+            <a href="contact.html" class="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Civilcost Construction</span>
+                    </div>
+                    <p class="text-gray-400">Building excellence in civil engineering since 2008.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Civil Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Structural Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Consulting</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Project Implementation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Engineering St, City, Country</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@civilcost.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Civilcost Construction Concept. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

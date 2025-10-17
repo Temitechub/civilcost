@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Civilcost Construction Concept</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background-color: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-building text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Civilcost Construction</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="nav-link text-blue-600 font-semibold">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="blog.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="about.html" class="block py-2 text-blue-600 font-semibold">About</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Services</a>
+                <a href="blog.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Blog</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-100 py-8 pt-24">
+        <div class="container mx-auto px-6">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+                            <span class="text-gray-500">About</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Building Trust Through Excellence</h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        For over 15 years, Civilcost Construction Concept has been at the forefront of civil engineering innovation, delivering exceptional projects that shape communities and transform landscapes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#team" class="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">Meet Our Team</a>
+                        <a href="#contact" class="px-8 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-blue-600 transition">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://i.pinimg.com/736x/88/dc/49/88dc49dbcfc2ebc7837c72510e1f36ce.jpg" alt="About Us" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-card text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-600">Projects Completed</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div class="text-gray-600">Expert Engineers</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Story</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    Founded in 2008 by a group of passionate engineers, Civilcost Construction Concept began as a small consulting firm with a big vision: to revolutionize the construction industry through innovation, sustainability, and uncompromising quality.
+                </p>
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    Today, we've grown into a comprehensive engineering solutions provider, serving clients across various sectors including commercial, residential, industrial, and infrastructure projects. Our commitment to excellence has earned us numerous accolades and, more importantly, the trust of our clients.
+                </p>
+                <p class="text-lg text-gray-600 text-center">
+                    At Civilcost, we believe that great engineering is not just about building structures—it's about building relationships, communities, and a sustainable future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Journey</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2008 - The Beginning</h3>
+                        <p class="text-gray-600">Civilcost Construction Concept was founded with a team of 5 engineers and a vision for excellence.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2012 - First Major Project</h3>
+                        <p class="text-gray-600">Completed our first major infrastructure project, establishing our reputation in the industry.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2015 - Expansion</h3>
+                        <p class="text-gray-600">Expanded our services to include structural engineering and project management.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2018 - Innovation Award</h3>
+                        <p class="text-gray-600">Received the National Engineering Innovation Award for our sustainable construction practices.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2021 - International Expansion</h3>
+                        <p class="text-gray-600">Expanded operations internationally, taking on projects in three new countries.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">2023 - Present</h3>
+                        <p class="text-gray-600">Continuing to lead the industry with innovative solutions and sustainable practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        To deliver exceptional engineering solutions that exceed client expectations while promoting sustainable development and innovation in the construction industry.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Our Vision</h3>
+                    <p class="text-lg text-gray-600">
+                        To be the leading engineering solutions provider recognized for our innovation, quality, and commitment to sustainable development.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Values</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Excellence</h3>
+                                <p class="text-gray-600">We strive for excellence in everything we do.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Integrity</h3>
+                                <p class="text-gray-600">We conduct business with honesty and transparency.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Innovation</h3>
+                                <p class="text-gray-600">We embrace new technologies and creative solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Sustainability</h3>
+                                <p class="text-gray-600">We prioritize environmental responsibility in all projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Leadership Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/15/51/91/1551917cf6023f9bbf9fcb1e03c8ef34.jpg" alt="CEO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">John Anderson</h3>
+                        <p class="text-blue-600 mb-3">Chief Executive Officer</p>
+                        <p class="text-gray-600 mb-4">With over 20 years of experience in civil engineering, John leads our team with vision and expertise.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/9d/8e/71/9d8e713f86ccc9b89c95240c526b9418.jpg" alt="CTO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Sarah Mitchell</h3>
+                        <p class="text-blue-600 mb-3">Chief Technical Officer</p>
+                        <p class="text-gray-600 mb-4">Sarah brings innovative technical solutions and oversees all engineering operations.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/88/dc/49/88dc49dbcfc2ebc7837c72510e1f36ce.jpg" alt="COO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Michael Chen</h3>
+                        <p class="text-blue-600 mb-3">Chief Operating Officer</p>
+                        <p class="text-gray-600 mb-4">Michael ensures smooth project execution and operational excellence across all departments.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Join Our Team</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">We're always looking for talented individuals who share our passion for excellence and innovation.</p>
+            <a href="contact.html" class="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">View Career Opportunities</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Civilcost Construction</span>
+                    </div>
+                    <p class="text-gray-400">Building excellence in civil engineering since 2008.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Civil Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Structural Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Consulting</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Project Implementation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Engineering St, City, Country</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@civilcost.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Civilcost Construction Concept. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
