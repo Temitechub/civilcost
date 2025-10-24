@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +9,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .hero-bg {
             background-image: linear-gradient(rgba(60, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.pinimg.com/736x/88/dc/49/88dc49dbcfc2ebc7837c72510e1f36ce.jpg');
             background-size: cover;
             background-position: center;
         }
-        2134
-        .card-hover {
+
+        2134 .card-hover {
             transition: all 0.3s ease;
         }
-        
+
         .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         .slide-up {
             animation: slideUp 0.8s ease-out;
         }
-        
+
         @keyframes slideUp {
-            from { 
+            from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-            to { 
+
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -66,34 +73,35 @@
             background-color: #3b82f6;
             transition: all 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
             left: 0;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
-        
+
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
-        
+
         .scroll-reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="fixed top-0 w-full bg-white shadow-md z-50">
@@ -129,10 +137,14 @@
     <section class="hero-bg h-screen flex items-center justify-center text-white">
         <div class="container mx-auto px-6 text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Building Excellence in Civil Engineering</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert solutions in structural engineering, design, consulting, and project implementation</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert solutions in structural engineering, design,
+                consulting, and project implementation</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="services.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">Our Services</a>
-                <a href="contact.html" class="px-8 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition">Contact Us</a>
+                <a href="services.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">Our
+                    Services</a>
+                <a href="contact.html"
+                    class="px-8 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition">Contact
+                    Us</a>
             </div>
         </div>
     </section>
@@ -147,21 +159,24 @@
                         <i class="fas fa-hard-hat text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Expert Team</h3>
-                    <p class="text-gray-600">Our team of experienced engineers and consultants bring decades of expertise to every project.</p>
+                    <p class="text-gray-600">Our team of experienced engineers and consultants bring decades of
+                        expertise to every project.</p>
                 </div>
                 <div class="card-hover bg-white p-8 rounded-lg shadow-lg text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Quality Assurance</h3>
-                    <p class="text-gray-600">We maintain the highest standards of quality in all our engineering and construction projects.</p>
+                    <p class="text-gray-600">We maintain the highest standards of quality in all our engineering and
+                        construction projects.</p>
                 </div>
                 <div class="card-hover bg-white p-8 rounded-lg shadow-lg text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-clock text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Timely Delivery</h3>
-                    <p class="text-gray-600">We pride ourselves on completing projects on schedule without compromising on quality.</p>
+                    <p class="text-gray-600">We pride ourselves on completing projects on schedule without compromising
+                        on quality.</p>
                 </div>
             </div>
         </div>
@@ -172,20 +187,28 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 scroll-reveal">
-                    <img src="https://i.pinimg.com/1200x/9d/22/10/9d22102447131a3279fa020654de9bd5.jpg" alt="Civil Engineering" class="rounded-lg shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/9d/22/10/9d22102447131a3279fa020654de9bd5.jpg"
+                        alt="Civil Engineering" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2 scroll-reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About Civilcost Construction Concept</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About Civilcost Construction Concept
+                    </h2>
                     <p class="text-gray-600 mb-4">
-                        With over 15 years of experience in the construction industry, Civilcost Construction Concept has established itself as a leader in civil engineering, structural engineering, and project implementation.
+                        With over 15 years of experience in the construction industry, Civilcost Construction Concept
+                        has established itself as a leader in civil engineering, structural engineering, and project
+                        implementation.
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Our comprehensive services cover every aspect of construction projects, from initial design and consulting to procurement and final implementation. We work with clients across various sectors, delivering innovative solutions that meet their specific needs.
+                        Our comprehensive services cover every aspect of construction projects, from initial design and
+                        consulting to procurement and final implementation. We work with clients across various sectors,
+                        delivering innovative solutions that meet their specific needs.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        At Civilcost, we combine technical expertise with practical experience to deliver projects that exceed expectations while staying within budget and timeline constraints.
+                        At Civilcost, we combine technical expertise with practical experience to deliver projects that
+                        exceed expectations while staying within budget and timeline constraints.
                     </p>
-                    <a href="about.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Learn More</a>
+                    <a href="about.html"
+                        class="btn-primary px-6 py-3 rounded-full text-white font-semibold inline-block">Learn More</a>
                 </div>
             </div>
         </div>
@@ -196,39 +219,52 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-drafting-compass text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Civil Engineering</h3>
-                    <p class="text-gray-600">Comprehensive civil engineering solutions for infrastructure development and construction projects.</p>
+                    <p class="text-gray-600">Comprehensive civil engineering solutions for infrastructure development
+                        and construction projects.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-building text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Structural Engineering</h3>
-                    <p class="text-gray-600">Expert structural design and analysis ensuring safety, durability, and efficiency of structures.</p>
+                    <p class="text-gray-600">Expert structural design and analysis ensuring safety, durability, and
+                        efficiency of structures.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-graduation-cap text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Training</h3>
-                    <p class="text-gray-600">Professional training programs for engineers and construction professionals.</p>
+                    <p class="text-gray-600">Professional training programs for engineers and construction
+                        professionals.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-palette text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Design</h3>
-                    <p class="text-gray-600">Innovative design solutions that balance aesthetics, functionality, and sustainability.</p>
+                    <p class="text-gray-600">Innovative design solutions that balance aesthetics, functionality, and
+                        sustainability.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-comments text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Consulting</h3>
-                    <p class="text-gray-600">Expert consulting services to guide your projects from conception to completion.</p>
+                    <p class="text-gray-600">Expert consulting services to guide your projects from conception to
+                        completion.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='services.html'">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='services.html'">
                     <i class="fas fa-shopping-cart text-blue-600 text-3xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Procurement</h3>
-                    <p class="text-gray-600">Efficient procurement solutions ensuring quality materials at competitive prices.</p>
+                    <p class="text-gray-600">Efficient procurement solutions ensuring quality materials at competitive
+                        prices.</p>
                 </div>
             </div>
             <div class="text-center mt-10">
-                <a href="services.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">View All Services</a>
+                <a href="services.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">View All
+                    Services</a>
             </div>
         </div>
     </section>
@@ -238,36 +274,52 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Recent Blog Posts</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='blog.html'">
-                    <img src="https://picsum.photos/seed/blog1/400/250.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='blog.html'">
+                    <img src="https://picsum.photos/seed/blog1/400/250.jpg" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-blue-600 mb-2">Engineering Trends</div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Sustainable Construction Practices in 2023</h3>
-                        <p class="text-gray-600 mb-4">Exploring the latest trends in sustainable construction and their impact on the industry.</p>
-                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More →</a>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Sustainable Construction Practices in 2023
+                        </h3>
+                        <p class="text-gray-600 mb-4">Exploring the latest trends in sustainable construction and their
+                            impact on the industry.</p>
+                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More
+                            →</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='blog.html'">
-                    <img src="https://picsum.photos/seed/blog2/400/250.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='blog.html'">
+                    <img src="https://picsum.photos/seed/blog2/400/250.jpg" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-blue-600 mb-2">Project Management</div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Effective Project Management in Construction</h3>
-                        <p class="text-gray-600 mb-4">Key strategies for successful project management in large-scale construction projects.</p>
-                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More →</a>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Effective Project Management in
+                            Construction</h3>
+                        <p class="text-gray-600 mb-4">Key strategies for successful project management in large-scale
+                            construction projects.</p>
+                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More
+                            →</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="window.location.href='blog.html'">
-                    <img src="https://picsum.photos/seed/blog3/400/250.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    onclick="window.location.href='blog.html'">
+                    <img src="https://picsum.photos/seed/blog3/400/250.jpg" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-blue-600 mb-2">Technology</div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">The Role of Technology in Modern Engineering</h3>
-                        <p class="text-gray-600 mb-4">How emerging technologies are transforming the civil engineering landscape.</p>
-                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More →</a>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">The Role of Technology in Modern
+                            Engineering</h3>
+                        <p class="text-gray-600 mb-4">How emerging technologies are transforming the civil engineering
+                            landscape.</p>
+                        <a href="blog.html" class="text-blue-600 font-semibold hover:text-blue-800 transition">Read More
+                            →</a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-10">
-                <a href="blog.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">View All Posts</a>
+                <a href="blog.html" class="btn-primary px-8 py-3 rounded-full text-white font-semibold">View All
+                    Posts</a>
             </div>
         </div>
     </section>
@@ -276,8 +328,11 @@
     <section class="py-20 bg-blue-600">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Start Your Next Project?</h2>
-            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">Contact us today to discuss how we can bring your construction vision to life with our expert engineering solutions.</p>
-            <a href="contact.html" class="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">Get In Touch</a>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">Contact us today to discuss how we can bring your
+                construction vision to life with our expert engineering solutions.</p>
+            <a href="contact.html"
+                class="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">Get In
+                Touch</a>
         </div>
     </section>
 
@@ -304,10 +359,14 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Civil Engineering</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Structural Engineering</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Consulting</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Project Implementation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Civil
+                                Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Structural
+                                Engineering</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Consulting</a>
+                        </li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Project
+                                Implementation</a></li>
                     </ul>
                 </div>
                 <div>
@@ -318,10 +377,14 @@
                         <li><i class="fas fa-envelope mr-2"></i> info@civilcost.com</li>
                     </ul>
                     <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram text-xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -333,7 +396,7 @@
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
@@ -353,4 +416,5 @@
         reveal();
     </script>
 </body>
+
 </html>
